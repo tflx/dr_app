@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.search {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  padding: $padding;
+  background-color: rgba($color-white, 0.8);
+  backdrop-filter: blur(10px);
+
+  @media (min-width: $small) {
+    position: relative;
+    backdrop-filter: none;
+  };
+
+}
+
+.input {
+  background-color: transparent;
+  padding-left: 0;
+  width: 100%;
+  @media (min-width: $small) {
+    width: 200px;
+  }
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $color-black;
+  font-size: 24px;
+}

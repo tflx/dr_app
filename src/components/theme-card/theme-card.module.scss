@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+
+.themeCard {
+  height: 100%;
+  box-shadow: 0 0px 17px rgba(0, 0, 0, 0.1);
+  padding: $padding;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  background-color: $color-grey;
+
+  animation: fadeIn 0.3s 0.1s linear backwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

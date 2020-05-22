@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.themeList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.themeItem {
+  flex: 1 1;
+  flex-basis: 100%;
+  padding: 15px;
+
+  @media (min-width: 768px) {
+    flex-basis: calc(100% / 3);
+    max-width: calc(100% / 3);
+  }
+
+  @media (min-width: 1440px) {
+    flex-basis: calc(100% / 4);
+    max-width: calc(100% / 4);
+  }
+}
