@@ -26,10 +26,13 @@ function Themes() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    forceCheck();
+  }, [filtered])
+
   const handleQuery = q => {
     const filtered = matchSorter(themes, q, {keys: ['Title', 'Description', 'DisplayType']});
-    setFiltered(filtered)
-    forceCheck();
+    setFiltered(filtered);
   }
 
   return (

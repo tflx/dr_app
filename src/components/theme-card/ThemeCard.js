@@ -14,7 +14,7 @@ function ThemeCard({Title, Description, PrimaryImageUri, Items}) {
   return (
     <div className={styles.themeCard}>
       {PrimaryImageUri ?
-        <LazyLoad offset={100} >
+        <LazyLoad offset={100} resize debounce throttle>
           <img width={1920} height={1080} alt={Title} className={styles.image} src={PrimaryImageUri} />
         </LazyLoad>
         : <ImagePlaceholder />
