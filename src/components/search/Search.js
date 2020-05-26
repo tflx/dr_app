@@ -9,10 +9,12 @@ const defaultProps = null;
 function Search({handleQuery}) {
   return (
     <form className={styles.search} onSubmit={e => e.preventDefault()}>
+      <label htmlFor="search">Filtrer temaer</label>
       <input
+        name="search"
         className={styles.input}
         onChange={(e) => handleQuery(e.target.value)}
-        placeholder='Filtrer temaer'
+        placeholder='Fx. dokumentar'
       />
     </form>
   );
